@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import Navbar from "./navbar";
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'; // Import editor styles
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 function Posts() {
   const [newPost, setNewPost] = useState({ title: "", description: "" });
