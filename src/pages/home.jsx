@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Navbar from "./navbar";
+import {Link} from "react-router-dom"
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -30,6 +31,9 @@ function Home() {
                 <div className="card-body">
                   <p className="card-text">{post.description}</p>
                 </div>
+                <div className="card-footer">
+                  <Link to ={"/details/" + post.id} className="btn btn-primary">Details</Link>
+                </div>
               </div>
             ))}
           </div>
@@ -40,3 +44,4 @@ function Home() {
 }
 
 export default Home;
+
