@@ -7,6 +7,7 @@ import './style.css';
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Posts from "./pages/posts";
+import Details from "./pages/details";
 import Logout from "./pages/logout";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/posts" element={<Posts />} />
+        <Route index path="/details/:id" element={<Details/>} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
     </BrowserRouter>
@@ -23,3 +25,4 @@ function App() {
 }
 
 createRoot(document.getElementById("root")).render(<App />);
+
